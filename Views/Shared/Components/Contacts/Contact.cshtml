@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using DynamicCv.Models.Entity
+@model TblContact
+
+<div class="container my-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-header bg-primary text-white text-center fs-4 fw-bold">
+            Contact Me
+        </div>
+        <div class="card-body p-4">
+
+            <form asp-controller="Contact" asp-action="SendMessage" method="post">
+                <div class="mb-3">
+                    <label asp-for="Namesurname" class="form-label fw-semibold">Ad Soyad</label>
+                    <input asp-for="Namesurname" class="form-control form-control-lg" placeholder="Name Surname" />
+                    <span asp-validation-for="Namesurname" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold">Email</label>
+                    <input asp-for="Email" type="email" class="form-control form-control-lg" placeholder="E-Mail" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Subject" class="form-label fw-semibold">Konu</label>
+                    <input asp-for="Subject" class="form-control form-control-lg" placeholder="Subject" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Message" class="form-label fw-semibold">Mesaj</label>
+                    <textarea asp-for="Message" rows="5" class="form-control form-control-lg" placeholder="Write to message here..."></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+
+                <div class="text-end">
+                    <button type="submit" class="btn btn-success btn-lg px-5 rounded-pill">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

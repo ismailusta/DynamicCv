@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using DynamicCv.Models;
 using Microsoft.AspNetCore.Mvc;
+using DynamicCv.Models;
 
 namespace DynamicCv.Controllers
 {

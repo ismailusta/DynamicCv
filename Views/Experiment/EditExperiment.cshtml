@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "EditExperiment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using DynamicCv.Models.Entity
+@model TblExperience
+<br />
+<h4>Edit Experiment Page</h4>
+<br />
+<form method="post">
+    @Html.Label("Experiment Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Experiment SubTitle")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Experiment Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Experiment Description")
+    @Html.TextAreaFor(x=>x.Description , new {@class="form-control"})
+    <br /> 
+    <button class="btn-info">Update</button>
+</form>
