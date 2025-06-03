@@ -9,7 +9,7 @@ namespace DynamicCv.Controllers
         GenericRepository<TblSkill> repo = new GenericRepository<TblSkill>();
         public IActionResult Index()
         {
-            var yetenekler = repo.List;
+            var yetenekler = repo.List();
             return View(yetenekler);
         }
     }
