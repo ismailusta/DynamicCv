@@ -29,5 +29,20 @@ namespace DynamicCv.Controllers
             repo.TRemove(t);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult EditSkill(int id) 
+        {
+            TblSkill t = repo.Find(x =>x.Id == id);
+            return View(t);
+        }
+        [HttpPost]
+        public IActionResult EditSkill(TblSkill p) 
+        {
+            TblSkill t = repo.Find(x => x.Id == p.Id);
+            t.Skill = p.Skill;
+            t.Progress = p.Progress;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
     }
 }
