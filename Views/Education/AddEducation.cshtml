@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using DynamicCv.Models.Entity
+@model TblEducation
+<br />
+<h4>Add Education Page</h4>
+<br />
+<form method="post">
+    @Html.Label("Education Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.Title,"", new {@style = "color:red"})
+    <br />
+    @Html.Label("Education SubTitle")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Education GNO")
+    @Html.TextBoxFor(x => x.Gno, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Gno, "", new {@style="color:blue"})
+    <br />
+    @Html.Label("Education Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Education Description")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn-info">Save</button>
+</form>

@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using DynamicCv.Models.Entity
+@model List<TblEducation>
+<br />
+<h2>Education List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>SubTitle</th>
+        <th>Description</th>
+        <th>GNO</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Title</td>
+            <td>@x.SubTitle</td>
+            <td>@x.Description</td>
+            <td>@x.Gno</td>
+            <td>@x.Date</td>
+            <td>
+                <a href="/Education/DeleteEducation/@x.Id" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash"></i>
+                    Delete
+                </a>
+            </td>
+            <td>
+                <a href="/Education/EditEducation/@x.Id" class="btn btn-info btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Edit
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Education/AddEducation/" class="btn btn-primary">Add New Education</a>
