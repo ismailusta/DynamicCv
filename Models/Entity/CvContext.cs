@@ -71,6 +71,9 @@ public partial class CvContext : DbContext
             entity.Property(e => e.Certificate)
                 .HasMaxLength(250)
                 .IsUnicode(false);
+            entity.Property(e => e.Date)
+                .HasMaxLength(100)
+                .IsUnicode(false);
         });
 
         modelBuilder.Entity<TblContact>(entity =>

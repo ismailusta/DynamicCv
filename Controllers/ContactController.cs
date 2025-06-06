@@ -1,23 +1,16 @@
 ﻿using DynamicCv.Models.Entity;
+using DynamicCv.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicCv.Controllers
 {
     public class ContactController : Controller
     {
-        private readonly CvContext _context;
-        public ContactController(CvContext context)
+        GenericRepository<TblContact> repo = new GenericRepository<TblContact>();
+        public IActionResult Index()
         {
-            _context = context;            
-        }
-        [HttpPost]
-        public IActionResult SendMessage(TblContact contact) 
-        {
-            contact.Date = DateTime.Now.ToString();
-            _context.TblContacts.Add(contact);
-            _context.SaveChanges();
-            TempData["Message"] = "Mesajınız başarıyla gönderildi.";
-            return RedirectToAction("Index", "Default");
+            var mesajlar = repo.List();
+            return View(mesajlar);
         }
     }
 }

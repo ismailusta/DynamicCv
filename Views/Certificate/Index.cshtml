@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using DynamicCv.Models.Entity
+@model List<TblCertificate>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                                <div class="tab-pane" id="timeline">
+                                    <!-- The timeline -->
+                                    <div class="timeline timeline-inverse">
+                                    @foreach (var x in Model)
+                                    {
+                                        <!-- timeline time label -->
+                                        <div class="time-label">
+                                            <span class="bg-success">
+                                                @x.Date
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.Certificate
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Certificate/EditCertificate/@x.Id" class="btn btn-primary btn-sm">Edit</a>
+                                                    <a href="/Certificate/DeleteCertificate/@x.Id" class="btn btn-danger btn-sm">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    </div>
+                                </div>
+                            <br />
+                            <a href="/Certificate/AddCertificate/" class="btn btn-primary">Add Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicCv")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf80da7e9b6be8ff0c38140f59050b4292b4ac30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0c25c5103ce39a96a56978456ed460bbb13cb5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicCv")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicCv")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
