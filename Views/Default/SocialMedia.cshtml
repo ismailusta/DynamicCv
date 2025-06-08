@@ -1,0 +1,10 @@
+﻿@model List<DynamicCv.Models.Entity.TblSocialMedia>
+
+<div class="social-icons">
+    @foreach (var social in Model)
+    {
+        <a class="social-icon" href="@social.Link" target="_blank">
+            <i class="@social.Icon"></i>
+        </a>
+    }
+</div>

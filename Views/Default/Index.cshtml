@@ -1,8 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@using DynamicCv.Models.Entity
-@model List<TblAbout>
+@model DynamicCv.Models.ViewModel.AboutSocialViewModel
 
 @{
     Layout = null;
@@ -28,8 +27,11 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Clarence Taylor</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/assets/img/profile.jpg" alt="PP" /></span>
+            @foreach(var x in Model.TblAbouts){ 
+            <span class="d-block d-lg-none">@x.Name @x.Surname</span>
+
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="@x.Photo" alt="PP" /></span>
+            }
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,28 +50,24 @@
     <!-- Page Content-->
     <div class="container-fluid p-0">
         <!-- About-->
-        @foreach(var x in Model)
-        {
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        @x.Name
-                        <span class="text-primary">@x.Surname</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        @x.Address · @x.Phone ·
-                        <a href="mailto:`@x.Email`">@x.Email</a>
-                    </div>
-                    <p class="lead mb-5">@x.Description.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </section>
-        }
+@foreach (var x in Model.TblAbouts)
+{
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                @x.Name <span class="text-primary">@x.Surname</span>
+            </h1>
+            <div class="subheading mb-5">
+                @x.Address · @x.Phone · <a href="mailto:@x.Email">@x.Email</a>
+            </div>
+            <p class="lead mb-5">@x.Description.</p>
+
+            <!-- Sosyal Medya ikonlarını burada çağırıyoruz -->
+            @await Html.PartialAsync("~/Views/Default/SocialMedia.cshtml", Model.TblSocialMedia)
+        </div>
+    </section>
+}
+
         
         <hr class="m-0" />
         <!-- Experience-->

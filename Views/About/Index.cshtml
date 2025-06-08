@@ -1,25 +1,39 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@using DynamicCv.Models.Entity
+@model List<TblAbout>
 @{
     ViewBag.Tite = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<h1> xosapdsadsa</h1>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>City</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Ahmet</td>
-        <td>Ankara</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Mehmet</td>
-        <td>İstanbul</td>
-    </tr>
-</table>
+<br />
+<h2>Edit About Page</h2>
+<br />
+<form method="post">
+    @foreach(var x in Model)
+    {
+        <label>Name</label>
+        <input type="text" name="Name" value="@x.Name" class="form-control"/>
+        <br />
+        <label>Surname</label>
+        <input type="text" name="Surname" value="@x.Surname" class="form-control"/>
+        <br />
+        <label>Address</label>
+        <input type="text" name="Address" value="@x.Address" class="form-control"/>
+        <br />
+        <label>Phone</label>
+        <input type="text" name="Phone" value="@x.Phone" class="form-control"/>
+        <br />
+        <label>Email</label>
+        <input type="text" name="Email" value="@x.Email" class="form-control" />
+        <br />
+        <label>Photo</label>
+        <input type="text" name="Photo" value="@x.Photo" class="form-control" />
+        <br />
+        <label>Description</label>
+        <textarea rows="5" class="form-control" name="Description" >@x.Description</textarea>
+        <br />
+    }
+    <button class="btn btn-success">Update</button>
+</form>
