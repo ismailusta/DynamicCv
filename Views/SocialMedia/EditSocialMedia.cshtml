@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "EditSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using DynamicCv.Models.Entity
+@model TblSocialMedia
+<br />
+<h4>Edit Social Media Page</h4>
+<br />
+<form method="post">
+    @Html.Label("Social Media App Name")
+    @Html.TextBoxFor(x => x.AppName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Social Media Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    <br />
+    @Html.Label("Social Media Icon")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+
+    <button class="btn-info">Update</button>
+</form>

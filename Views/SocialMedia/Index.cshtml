@@ -21,7 +21,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <a href="/Skill/AddSkill/" class="btn btn-primary">Add Social Media Account</a>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Add Social Media Account</button>
                                 <br />
                                 <br />
                                 <table class="table table-bordered">
@@ -41,13 +41,13 @@
                                                 <td>@x.Id.</td>
                                                 <td>@x.AppName</td>
                                                 <td>
-                                                    <a href="/Skill/DeleteSkill/@x.Id" class="btn btn-danger btn-sm">
+                                                    <a href="/SocialMedia/DeleteSocialMedia/@x.Id" class="btn btn-danger btn-sm">
                                                         <i class="fas fa-trash"></i>
                                                         Delete
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="/Skill/EditSkill/@x.Id" class="btn btn-info btn-sm">
+                                                    <a href="/SocialMedia/EditSocialMedia/@x.Id" class="btn btn-info btn-sm">
                                                         <i class="fas fa-pencil-alt"></i>
                                                         Edit
                                                     </a>
@@ -63,6 +63,29 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
+        <div class="modal" id="Modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Add to social media panel</h2>
+                    </div>
+                    <form method="post" action="/SocialMedia/AddSocialMedia">
+                        <div class="modal-body">
+                            <label>Social Media App Name</label>
+                            <input type="text" class="form-control" name="AppName" />
+                            <br />
+                            <label>Social Media Link</label>
+                            <input type="text" class="form-control" name="Link" />
+                            <br />
+                            <label>Social Media Icon</label>
+                            <input type="text" class="form-control" name="Icon" />
+                            <br />
+                            <button class="btn btn-info">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- /.content -->
     </div>
 </body>
