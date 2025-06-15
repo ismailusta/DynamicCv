@@ -19,8 +19,8 @@ Teknolojiler
 
 Ekran Görüntüleri
 ![contactme sayfası](https://github.com/user-attachments/assets/f10200e8-fd50-4245-9870-cf57223dde8e)
-
- 
+![admin panel](https://github.com/user-attachments/assets/2ab6d191-bbc9-4f94-aebb-396ec05bf0c0)
+![education page](https://github.com/user-attachments/assets/6474b238-a29f-4945-8af5-c09e19b3860a)
 
 
 Katkıda Bulunma
@@ -31,6 +31,4 @@ Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
 İletişim
 
-  İsmail Usta - GitHub Profiliniz
-  E-posta: ismailusta@example.com (İsteğe bağlı, ekleyebilirsiniz)
-  LinkedIn: linkedin.com/in/ismailusta (İsteğe bağlı, ekleyebilirsiniz)
+  E-posta: ismail.usta028@gmail.com
