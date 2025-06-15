@@ -1,5 +1,6 @@
 ﻿using DynamicCv.Models.Entity;
 using DynamicCv.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicCv.Controllers

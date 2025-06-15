@@ -1,9 +1,11 @@
 ﻿using DynamicCv.Models.Entity;
 using DynamicCv.Models.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicCv.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         CvContext db = new CvContext();

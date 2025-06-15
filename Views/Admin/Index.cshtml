@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using DynamicCv.Models.Entity
+@model List<TblLogin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Admin Crud</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Username</td>
+            <td><a href="/Admin/DeleteAdmin/@x.Id/" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/EditAdmin/@x.Id" class="btn btn-warning">Edit</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Admin/AddAdmin/" class="btn btn-primary">Add Admin Account</a>

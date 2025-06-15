@@ -32,6 +32,18 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Admin/AddAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Admin/EditAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Certificate/AddCertificate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGVcQWRkQ2VydGlmaWNhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -122,6 +134,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/fonur/source/repos/DynamicCv/DynamicCv/Views/Shared/Error.cshtml]
